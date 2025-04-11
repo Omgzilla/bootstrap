@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-HOME="/home/$(USER)"
+HOME="/home/$(cat $USER)"
 REPO_DIR="$HOME/.local"
 REPO_NAME="dots"
 REPO_URL="https://github.com/Omgzilla/dots"
