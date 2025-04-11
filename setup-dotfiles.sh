@@ -1,7 +1,7 @@
 #!/bin/env bash
 
-USER=$($USER)
-REPO_DIR="$USER/.local"
+HOME="/home/$($USER)"
+REPO_DIR="$HOME/.local"
 REPO_NAME="dots"
 REPO_URL="https://github.com/Omgzilla/dots"
 
@@ -15,14 +15,12 @@ if ! is_stow_installed; then
   exit 1
 fi
 
-cd "/home/$USER"
-
 # Check if `.local/bin` exists
-if [ -d ".local/bin" && -d ".config" ]; then
+if [ -d "$HOME/.local/bin" && -d "$HOME/.config" ]; then
   continue
 else
-  mkdir -p .local/bin
-  mkdir -p .config
+  mkdir -p $HOME/.local/bin
+  mkdir -p $HOME/.config
 fi
 
 # Check if the repository already exists
