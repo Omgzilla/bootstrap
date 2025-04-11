@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 USER=$($USER)
-REPO_DIR="~/.local"
+REPO_DIR="$USER/.local"
 REPO_NAME="dots"
 REPO_URL="https://github.com/Omgzilla/dots"
 
