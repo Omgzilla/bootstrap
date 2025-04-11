@@ -1,7 +1,7 @@
 #!/bin/env bash
 
 
-REPO_DIR="~/.local/"
+REPO_DIR="~/.local"
 REPO_NAME="dots"
 REPO_URL="https://github.com/Omgzilla/dots"
 
@@ -29,7 +29,7 @@ fi
 if [ -d "$REPO_DIR/$REPO_NAME" ]; then
   echo "Repository '$REPO_NAME' already exists, skipping clone"
 else
-  git clone "$REPO_URL" "$REPO_DIR"
+  git clone "$REPO_URL" "$REPO_DIR"/"$REPO_NAME"
 fi
 
 # Check if clone was successful
